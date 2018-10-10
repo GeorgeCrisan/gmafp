@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+    <title>Map Api</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content=" Learn more! ">
+    <meta name="robots" contet="index,follow">
+    <meta name="author" content="George Crisan at georgerdp@gmail.com">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.min.css">
+  </head>
+  <body>
+    <header> </header>
+    <main> 
+      <h1>Let's get going</h1>
+      <div class="container main-form">
+        <div class="row"> 
+          <div class="col-md-6 offset-md-3">
+            <div class="form inputs">
+              <div class="form-group">
+                <label for="location">Starting Location:</label>
+                <input class="form-control" type="text" id="location" value="Norwich" required>
+              </div>
+              <div class="form-group">
+                <label for="searchTerm">Place to search:</label>
+                <input class="form-control" type="text" id="searchTerm" value="Castle" required>
+              </div>
+              <div class="form-group"> 
+                <label for="mileRadius"> Area Radius in miles:</label>
+                <input class="form-control" type="text" id="mileRadius" value="10" required>
+              </div>
+              <button class="btn btn-success" type="button" id="searchButton">Feeling Lucky!  </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section>
+      <div id="map"></div>
+    </section>
+    <script rel="javascript" src="./jquery-3.2.0.min.js"></script>
+    <script rel="javascript" src="./lodash.min.js"></script>
+    <script rel="javascript" src="./bootstrap.min.js"> </script>
+    <script rel="javascript" src="./source-dist.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqxUUlurPmCju8KzoDRDuTtwHFHKobZ6g&amp;libraries=places&amp;callback=initMap" async defer></script>
+  </body>
+</html>

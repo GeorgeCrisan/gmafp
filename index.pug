@@ -1,0 +1,37 @@
+doctype html
+html(lang='en') 
+  head
+    title Map Api
+    meta(charset='utf-8')  
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="description" content=" Learn more! ")
+    meta(name="robots" contet="index,follow")
+    meta(name="author" content="George Crisan at georgerdp@gmail.com")
+    link(rel='stylesheet' href='bootstrap.min.css')
+    link(rel='stylesheet' href='style.min.css')
+  body
+    header 
+    main 
+      h1 Let's get going
+      .container.main-form
+        .row 
+          .col-md-6.offset-md-3
+            div.form.inputs
+              .form-group
+                label(for='location') Starting Location:
+                input(type='text' id='location' value='Norwich' class='form-control' required)
+              .form-group
+                label(for='searchTerm') Place to search:
+                input(type='text' id='searchTerm' value='Castle' class='form-control' required)
+              .form-group 
+                label(for='mileRadius')  Area Radius in miles:
+                input(type='text' id='mileRadius' value='10' class='form-control' required)    
+              button(type='button'  id='searchButton').btn.btn-success Feeling Lucky!  
+    section
+      div#map
+    script(rel='javascript' src='./jquery-3.2.0.min.js')
+    script(rel='javascript' src='./lodash.min.js')
+    script(rel='javascript' src='./bootstrap.min.js')  
+    script(rel='javascript' src='./source-dist.js')
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqxUUlurPmCju8KzoDRDuTtwHFHKobZ6g&libraries=places&callback=initMap"
+async defer)
