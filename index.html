@@ -17,7 +17,7 @@
       <div class="container main-form">
         <div class="row"> 
           <div class="col-md-6 offset-md-3">
-            <div class="form inputs">
+            <form class="inputs" onsubmit="return false">
               <div class="form-group">
                 <label for="location">Starting Location:</label>
                 <input class="form-control" type="text" id="location" value="Norwich" required>
@@ -30,8 +30,8 @@
                 <label for="mileRadius"> Area Radius in miles:</label>
                 <input class="form-control" type="text" id="mileRadius" value="10" required>
               </div>
-              <button class="btn btn-success" type="button" id="searchButton">Feeling Lucky!  </button>
-            </div>
+              <button class="btn btn-success" type="submit" id="searchButton">Feeling Lucky!  </button>
+            </form>
           </div>
         </div>
       </div>
@@ -43,6 +43,7 @@
     <script rel="javascript" src="./lodash.min.js"></script>
     <script rel="javascript" src="./bootstrap.min.js"> </script>
     <script rel="javascript" src="./source-dist.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqxUUlurPmCju8KzoDRDuTtwHFHKobZ6g&amp;libraries=places&amp;callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=lowless&amp;libraries=places&amp;callback=initMap" async defer></script>
   </body>
 </html>
+<!--'AIzaSyBqxUUlurPmCju8KzoDRDuTtwHFHKobZ6g'-->

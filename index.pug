@@ -16,7 +16,7 @@ html(lang='en')
       .container.main-form
         .row 
           .col-md-6.offset-md-3
-            div.form.inputs
+            form(onsubmit="return false").inputs
               .form-group
                 label(for='location') Starting Location:
                 input(type='text' id='location' value='Norwich' class='form-control' required)
@@ -26,12 +26,12 @@ html(lang='en')
               .form-group 
                 label(for='mileRadius')  Area Radius in miles:
                 input(type='text' id='mileRadius' value='10' class='form-control' required)    
-              button(type='button'  id='searchButton').btn.btn-success Feeling Lucky!  
+              button(type='submit'  id='searchButton').btn.btn-success Feeling Lucky!  
     section
       div#map
     script(rel='javascript' src='./jquery-3.2.0.min.js')
     script(rel='javascript' src='./lodash.min.js')
     script(rel='javascript' src='./bootstrap.min.js')  
     script(rel='javascript' src='./source-dist.js')
-    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqxUUlurPmCju8KzoDRDuTtwHFHKobZ6g&libraries=places&callback=initMap"
-async defer)
+    script(src="https://maps.googleapis.com/maps/api/js?key=lowless&libraries=places&callback=initMap" async defer)
+//'AIzaSyBqxUUlurPmCju8KzoDRDuTtwHFHKobZ6g'

@@ -34,11 +34,13 @@ const initMap = function(){
 
 //add event listnener to search location
 
-document.getElementById('searchButton').addEventListener('click',()=>{
+document.getElementById('searchButton').addEventListener('click',(event)=>{
+   // event.preventDefault();
    let searchTerm, location, radius;
    searchTerm = document.getElementById('searchTerm').value;
    location = document.getElementById('location').value;
    radius = document.getElementById('mileRadius').value;
+   //validation if no value return false ... to add
    console.log(searchTerm,location,radius);
 
 });
