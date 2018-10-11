@@ -13,24 +13,35 @@
   <body>
     <header> </header>
     <main> 
-      <h1>Let's get going</h1>
+      <h1>Search for places around specific location:</h1>
       <div class="container main-form">
         <div class="row"> 
           <div class="col-md-6 offset-md-3">
             <form class="inputs" onsubmit="return false">
               <div class="form-group">
-                <label for="location">Starting Location:</label>
+                <label for="location">Enter/Select Country:</label>
+                <input class="form-control" type="text" name="Countries" list="countries" id="selectCountry" required>
+                <datalist id="countries"> 
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Romania">Romania</option>
+                  <option value="USA">USA</option>
+                  <option value="Japan">Japan</option>
+                </datalist>
+              </div>
+              <div class="form-group">
+                <label for="location">Starting Location(city,town):</label>
                 <input class="form-control" type="text" id="location" value="Norwich" required>
               </div>
               <div class="form-group">
-                <label for="searchTerm">Place to search:</label>
+                <label for="searchTerm">Place(s) to search:</label>
                 <input class="form-control" type="text" id="searchTerm" value="Castle" required>
               </div>
               <div class="form-group"> 
                 <label for="mileRadius"> Area Radius in miles:</label>
                 <input class="form-control" type="text" id="mileRadius" value="10" required>
               </div>
-              <button class="btn btn-success" type="submit" id="searchButton">Feeling Lucky!  </button>
+              <button class="d-flex justify-content-center btn btn-warning" type="submit" id="searchButton">Feeling Lucky!  </button>
             </form>
           </div>
         </div>
@@ -43,7 +54,7 @@
     <script rel="javascript" src="./lodash.min.js"></script>
     <script rel="javascript" src="./bootstrap.min.js"> </script>
     <script rel="javascript" src="./source-dist.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=lowless&amp;libraries=places&amp;callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&amp;libraries=places&amp;callback=initMap" async defer></script>
   </body>
 </html>
 <!--'AIzaSyBqxUUlurPmCju8KzoDRDuTtwHFHKobZ6g'-->
